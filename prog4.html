@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2 style="text-align: center;">Registration Form</h2>
+    <form>
+        <table>
+            <tr>
+                <th colspan="2">Personal Details</th>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male" required> Male
+                    <input type="radio" name="gender" value="female" required> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="reading"> Reading
+                    <input type="checkbox" name="hobby" value="traveling"> Traveling
+                    <input type="checkbox" name="hobby" value="sports"> Sports
+                </td>
+            </tr>
+            <tr>
+                <td>Country:</td>
+                <td>
+                    <select name="country" required>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td><textarea name="comments" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+<button type="submit" colspan="2">Register</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

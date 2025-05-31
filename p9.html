@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>jQuery Script Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            margin-bottom: 20px;
+        }
+        .animate-box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+        .change {
+            background-color: pink;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <p id="paragraph">This is a paragraph.</p>
+        <button id="append-to-paragraph">Append to Paragraph</button>
+    </div>
+
+    <div class="container">
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+        <button id="append-to-list">Append to List</button>
+    </div>
+
+    <div class="container">
+        <button id="animate-button">Animate Box</button>
+        <div class="animate-box"></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#append-to-paragraph').click(function () {
+                $('#paragraph').append(' Appended content!');
+            });
+
+
+
+            $('#append-to-list').click(function () {
+                $('#list').append('<li>Appended item</li>');
+            });
+
+   
+
+
+
+            $('#animate-button').click(function () {
+                $('.animate-box').animate({
+                    width: '200px',
+                    height: '200px',
+                    marginLeft: '50px'
+                }, 1000, function () {
+                    $(this).addClass('change');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
